@@ -1,0 +1,179 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./fonts/Montserrat-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./fonts/Montserrat-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./fonts/Montserrat-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./fonts/Montserrat-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        interpolate-size: allow-keywords;
+    }
+}
+body {
+    /* 4. Add accessible line-height */
+    line-height: 1.5;
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+    font: inherit;
+}
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+/* 9. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+input,
+textarea,
+select,
+button {
+    font: inherit;
+}
+
+a {
+    color: var(--color-light-gray);
+    text-decoration: none;
+    font-size: var(--description-font-size);
+}
+
+a:hover {
+    color: var(--color-light);
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+    isolation: isolate;
+}
+
+:where(ul[class]) {
+    list-style: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+:root {
+    --color-light: #FFFFFF;
+    --color-light-gray: #D9D9D9;
+    --color-dark: #121517;
+
+    --linear-gradient: linear-gradient(267deg, #237249 -46.81%, #35C66B 52.2%);
+
+    --font-family: 'Montserrat', sans-serif;
+
+    --header-font-size: 80px;
+    --header-line-height: 109.471%;
+    --description-font-size: 20px;
+    --description-line-height: 163.471%;
+
+    --background-color: #121517;
+
+    --container-width: 1270px;
+    --container-padding-x: 15px;
+}
+
+body {
+    font-family: var(--font-family);
+    font-weight: 400;
+    background-color: var(--background-color);
+    color: var(--color-light-gray);
+}
+
+h1, h2 {
+    font-weight: 800;
+}
+
+.container {
+    max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+    margin-inline: auto;
+    padding-block: 0;
+    padding-inline: var(--container-padding-x);
+}
+
+/* HEADER SECTION */
+.header__wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 95px;
+    padding-top: 50px;
+    padding-bottom: 65px;
+}
+
+.logo {
+    font-size: clamp(22px, 2.48vw, 37px);
+    font-weight: 800;
+    background: var(--linear-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header__menu {
+    display: flex;
+    align-items: center;
+    column-gap: 95px;
+}
