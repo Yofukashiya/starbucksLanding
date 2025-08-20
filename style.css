@@ -43,6 +43,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow: hidden;
 }
 
 /* 3. Enable keyword animations */
@@ -88,6 +89,7 @@ button {
 a {
     color: var(--color-light-gray);
     text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 a:hover {
@@ -183,8 +185,17 @@ h1, h2 {
     padding-block: 20px;
     padding-inline: 54px;
     background: var(--linear-gradient);
+    background-position: 100% 0;
+    background-size: 300% 100%;
     border-radius: var(--border-radius);
     text-align: center;
+    transition: all .3s ease;
+}
+
+.button:hover {
+    background-position: 0 0;
+    background-color: var(--color-light);
+    transform: translateY(-0.25em);
 }
 
 .button.button--transparent {
@@ -278,7 +289,34 @@ h1, h2 {
 }
 
 .hero__image-wrapper {
+    position: relative;
     padding-right: 60px;
+}
+
+.hero__image-wrapper::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 70%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 324px;
+    height: 324px;
+    border-radius: 100%;
+    background: linear-gradient(267deg, rgba(35, 114, 73, 0.55) 3.05%, rgba(53, 198, 107, 0.73) 40.73%);
+    filter: blur(88px);
+}
+
+.hero__image-wrapper::after {
+    content: '';
+    position: absolute;
+    z-index: -2;
+    background: url('./icons/lines.svg') center/contain no-repeat;
+    width: 860px;
+    height: 620px;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .hero__image-wrapper img {
@@ -286,3 +324,4 @@ h1, h2 {
     max-width: 468px;
     height: auto;
 }
+
