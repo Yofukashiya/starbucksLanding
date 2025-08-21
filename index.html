@@ -1,116 +1,377 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+		/>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="container">
+				<div class="header__wrapper">
+					<a href="#" class="logo__header logo text-gradient"
+						>StarBucks</a
+					>
 
+					<nav class="header__nav">
+						<ul class="header__menu">
+							<li class="header__menu-item">
+								<a href="#" class="header__menu-link">Home</a>
+							</li>
+							<li class="header__menu-item">
+								<a href="#" class="header__menu-link">Select</a>
+							</li>
+							<li class="header__menu-item">
+								<a href="#" class="header__menu-link">Shop</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
 
-    <header class="header">
-        <div class="container">
-            <div class="header__wrapper">
-                <a href="#" class="logo__header logo text-gradient">StarBucks</a>
+		<main class="main">
+			<section class="hero">
+				<div class="container">
+					<div class="hero__wrapper">
+						<div class="hero__content">
+							<h1 class="hero__content-title title">
+								New Cafe <br />
+								by <span class="text-gradient">StarBucks</span>
+							</h1>
+							<p class="hero__content-text description">
+								Have time to buy the most harmonious drinks in
+								the new&nbsp;Starbucks coffee and don't forget
+								about the discount!
+							</p>
+							<div class="hero__content-buttons">
+								<a
+									class="hero__content-select-button button button--white-text button--wide"
+									href="#"
+									>Select a coffee
+								</a>
+								<a
+									class="hero__content-more-button button button--transparent"
+									href="#"
+									>More</a
+								>
+							</div>
+							<div class="hero__content-statistics">
+								<ul class="hero__content-statistics-list">
+									<li class="hero__content-statistics-item">
+										<p
+											class="hero__content-statistics-score"
+										>
+											9k<span class="text-gradient"
+												>+</span
+											>
+										</p>
+										<p
+											class="hero__content-statistics-description description"
+										>
+											Premium Users
+										</p>
+									</li>
+									<li class="hero__content-statistics-item">
+										<p
+											class="hero__content-statistics-score"
+										>
+											2k<span class="text-gradient"
+												>+</span
+											>
+										</p>
+										<p
+											class="hero__content-statistics-description description"
+										>
+											Happy Customer
+										</p>
+									</li>
+									<li class="hero__content-statistics-item">
+										<p
+											class="hero__content-statistics-score"
+										>
+											28<span class="text-gradient"
+												>+</span
+											>
+										</p>
+										<p
+											class="hero__content-statistics-description description"
+										>
+											Awards Winning
+										</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="hero__image-wrapper">
+							<img
+								src="./images/cups/green-big.png"
+								alt="A starbucks coffee cup"
+								class="hero__image"
+								width="468"
+								height="628"
+							/>
+						</div>
+					</div>
+				</div>
+			</section>
 
-                <nav class="header__nav">
-                    <ul class="header__menu">
-                        <li class="header__menu-item">
-                            <a href="#" class="header__menu-link">Home</a>
-                        </li>
-                        <li class="header__menu-item">
-                            <a href="#" class="header__menu-link">Select</a>
-                        </li>
-                        <li class="header__menu-item">
-                            <a href="#" class="header__menu-link">Shop</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+			<section class="benefits">
+				<div class="container">
+					<div class="benefits__wrapper">
+						<h2 class="benefits__title visually-hidden">
+							Starbucks coffee benefits
+						</h2>
+						<div class="benefits__content">
+							<div class="benefits__content-item">
+								<div class="benefits__content-image-wrapper">
+									<img
+										src="./icons/3d/heart.png"
+										alt="Tasty logo"
+										class="benefits__content-image"
+										width="146"
+										height="183"
+									/>
+								</div>
+								<h3 class="benefits__content-title">Tasty</h3>
+								<p class="benefits__content-description">
+									We have the most delicious coffee
+								</p>
+							</div>
+							<div class="benefits__content-item">
+								<div class="benefits__content-image-wrapper">
+									<img
+										src="./icons/3d/rocket.png"
+										alt="Fast logo"
+										class="benefits__content-image"
+										width="208"
+										height="201"
+									/>
+								</div>
+								<h3 class="benefits__content-title">Fast</h3>
+								<p class="benefits__content-description">
+									Our cafe will serve you quickly
+								</p>
+							</div>
+							<div class="benefits__content-item">
+								<div class="benefits__content-image-wrapper">
+									<img
+										src="./icons/3d/money.png"
+										alt="Money logo"
+										class="benefits__content-image"
+										width="211"
+										height="153"
+									/>
+								</div>
+								<h3 class="benefits__content-title">
+									Available
+								</h3>
+								<p class="benefits__content-description">
+									Cafe will serve at the most pleasant prices
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-    <main class="main">
+			<section class="stats">
+				<div class="container">
+					<div class="stats__wrapper">
+						<div class="stats__main-image-wrapper">
+							<img
+								src="./images/room.jpg"
+								alt="Room photo"
+								class="stats__main-image"
+								width="465"
+								height="684"
+							/>
+						</div>
+						<div class="stats__content">
+							<h2 class="stats__title title">
+								We make
+								<span class="text-gradient">delicious</span>
+							</h2>
+							<p class="stats__description description">
+								Only in 2021 we have made more than 100,000
+								orders for you, your loved ones, all of you, and
+								in 2022 we are ready to destroy the market
+							</p>
+							<div class="stats__sub-image-wrapper">
+								<img
+									src="./images/kitchen.jpg"
+									alt="Kitchen photo"
+									class="stats__sub-image"
+									width="447"
+									height="275"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-        <section class="hero">
-            <div class="container">
-                <div class="hero__wrapper">
-                    <div class="hero__content">
-                        <h1 class="hero__content-title title">New Cafe <br />
-                            by <span class="text-gradient">StarBucks</span>
-                        </h1>
-                        <p class="hero__content-text description">
-                            Have time to buy the most harmonious drinks in the
-                            new&nbsp;Starbucks coffee and don't forget about the discount!
-                        </p>
-                        <div class="hero__content-buttons">
-                            <a class="hero__content-select-button button button--white-text button--wide" href="#">Select a coffee </a>
-                            <a class="hero__content-more-button button button--transparent" href="#">More</a>
-                        </div>
-                        <div class="hero__content-statistics">
-                            <ul class="hero__content-statistics-list">
-                                <li class="hero__content-statistics-item">
-                                    <p class="hero__content-statistics-score">9k<span class="text-gradient">+</span></p>
-                                    <p class="hero__content-statistics-description description">Premium Users</p>
-                                </li>
-                                <li class="hero__content-statistics-item">
-                                    <p class="hero__content-statistics-score">2k<span class="text-gradient">+</span></p>
-                                    <p class="hero__content-statistics-description description">Happy Customer</p>
-                                </li>
-                                <li class="hero__content-statistics-item">
-                                    <p class="hero__content-statistics-score">28<span class="text-gradient">+</span></p>
-                                    <p class="hero__content-statistics-description description">Awards Winning</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="hero__image-wrapper">
-                        <img src="./images/cups/green-big.png" alt="A starbucks coffee cup" class="hero__image" width="468" height="628">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="benefits">
-            <div class="container">
-                <div class="benefits__wrapper">
-                    <h2 class="benefits__title visually-hidden">Starbucks coffee benefits</h2>
-                    <div class="benefits__content">
-                        <div class="benefits__content-item">
-                            <div class="benefits__content-image-wrapper">
-                                <img src="./icons/3d/heart.png" alt="Tasty logo" class="benefits__content-image" width="146" height="183">
-                            </div>
-                            <h3 class="benefits__content-title">Tasty</h3>
-                            <p class="benefits__content-description">
-                                We have the most delicious coffee
-                            </p>
-                        </div>
-                        <div class="benefits__content-item">
-                            <div class="benefits__content-image-wrapper">
-                                <img src="./icons/3d/rocket.png" alt="Fast logo" class="benefits__content-image" width="208" height="201">
-                            </div>
-                            <h3 class="benefits__content-title">Fast</h3>
-                            <p class="benefits__content-description">
-                                Our cafe will serve you quickly
-                            </p>
-                        </div>
-                        <div class="benefits__content-item">
-                            <div class="benefits__content-image-wrapper">
-                                <img src="./icons/3d/money.png" alt="Money logo" class="benefits__content-image" width="211" height="153">
-                            </div>
-                            <h3 class="benefits__content-title">Available</h3>
-                            <p class="benefits__content-description">
-                                Cafe will serve at the most pleasant prices
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-    </main>
-</body>
+			<section class="products">
+				<div class="container">
+					<div class="products__wrapper">
+						<div class="products__header">
+							<h2 class="products__title title">
+								New Our<br />
+								<span class="text-gradient">Products</span>
+							</h2>
+							<p class="products__description description">
+								Have time to buy the most harmonious drinks in
+								the new Starbucks coffee and don't forget about
+								the discount! Starbucks coffee and&nbsp; don't
+								forget about the discount!
+							</p>
+						</div>
+						<div class="products__items">
+							<div class="products__item">
+								<div class="products__item-image-wrapper">
+									<img
+										src="./images/cups/green.png"
+										alt="Green coffee cup"
+										class="products__item-image"
+										width="180"
+										height="240"
+									/>
+								</div>
+								<h3
+									class="products__item-title white-bold-text"
+								>
+									Espresso
+								</h3>
+								<p
+									class="products__item-description description"
+								>
+									Our cafe will serve you quickly
+								</p>
+								<div class="products__item-details">
+									<p
+										class="products__item-price white-bold-text"
+									>
+										7,45$
+									</p>
+									<p class="products__item-size description">
+										330 ml
+									</p>
+								</div>
+								<button class="products__item-button button">
+									Buy Product
+								</button>
+							</div>
+							<div class="products__item">
+								<div class="products__item-image-wrapper">
+									<img
+										src="./images/cups/brown.png"
+										alt="Brown coffee cup"
+										class="products__item-image"
+										width="180"
+										height="240"
+									/>
+								</div>
+								<h3
+									class="products__item-title white-bold-text"
+								>
+									Americano
+								</h3>
+								<p
+									class="products__item-description description"
+								>
+									Our cafe will serve you quickly
+								</p>
+								<div class="products__item-details">
+									<p
+										class="products__item-price white-bold-text"
+									>
+										7,45$
+									</p>
+									<p class="products__item-size description">
+										330 ml
+									</p>
+								</div>
+								<button class="products__item-button button">
+									Buy Product
+								</button>
+							</div>
+							<div class="products__item">
+								<div class="products__item-image-wrapper">
+									<img
+										src="./images/cups/yellow.png"
+										alt="Yellow coffee cup"
+										class="products__item-image"
+										width="180"
+										height="240"
+									/>
+								</div>
+								<h3
+									class="products__item-title white-bold-text"
+								>
+									Frappuccino
+								</h3>
+								<p
+									class="products__item-description description"
+								>
+									Our cafe will serve you quickly
+								</p>
+								<div class="products__item-details">
+									<p
+										class="products__item-price white-bold-text"
+									>
+										7,45$
+									</p>
+									<p class="products__item-size description">
+										330 ml
+									</p>
+								</div>
+								<button class="products__item-button button">
+									Buy Product
+								</button>
+							</div>
+							<div class="products__item">
+								<div class="products__item-image-wrapper">
+									<img
+										src="./images/cups/green.png"
+										alt="Green coffee cup"
+										class="products__item-image"
+										width="180"
+										height="240"
+									/>
+								</div>
+								<h3
+									class="products__item-title white-bold-text"
+								>
+									Cappuccino
+								</h3>
+								<p
+									class="products__item-description description"
+								>
+									Our cafe will serve you quickly
+								</p>
+								<div class="products__item-details">
+									<p
+										class="products__item-price white-bold-text"
+									>
+										7,45$
+									</p>
+									<p class="products__item-size description">
+										330 ml
+									</p>
+								</div>
+								<button class="products__item-button button">
+									Buy Product
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
 </html>
