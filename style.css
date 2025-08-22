@@ -162,6 +162,7 @@ body {
 	font-weight: 400;
 	background-color: var(--background-color);
 	color: var(--color-light-gray);
+	overflow-x: hidden;
 }
 
 h1,
@@ -800,6 +801,111 @@ h2 {
 	border: none;
 	color: var(--color-light);
 	cursor: pointer;
+}
+
+/* EVENTS SECTION */
+.events {
+	margin-bottom: 130px;
+}
+
+.events__content {
+	position: relative;
+}
+
+.events__content::before {
+	content: "";
+	position: absolute;
+	top: -15%;
+	left: 5%;
+	transform: translate(-50%, -50%);
+	width: 673px;
+	height: 252px;
+	background: url("./icons/lines-half.svg") center/contain no-repeat;
+	z-index: -1;
+}
+
+.events__content::after {
+	content: "";
+	position: absolute;
+	width: 322px;
+	height: 277px;
+	border-radius: 322px;
+	top: 90%;
+	left: 35%;
+	transform: translate(-50%, -50%);
+	background: rgba(217, 217, 217, 0.12);
+	filter: blur(80px);
+	z-index: -1;
+}
+
+.events__header {
+	display: flex;
+	align-items: center;
+	column-gap: 70px;
+	flex-direction: row-reverse;
+	margin-bottom: 55px;
+}
+
+.events__title {
+	max-width: 366px;
+}
+
+.events__description {
+	max-width: 457px;
+}
+
+.events__content {
+	display: grid;
+	grid-auto-rows: 260px;
+	grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
+	grid-template-areas:
+		"price price tour tour"
+		"free  socials socials choose";
+	gap: 25px;
+}
+
+.events__item {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 30px;
+	padding-top: 45px;
+	padding-bottom: 25px;
+	padding-left: 25px;
+}
+
+.events__item--price {
+	background-image: url("./images/events/1.png");
+	grid-area: price;
+}
+
+.events__item--tour {
+	background-image: url("./images/events/2.png");
+	grid-area: tour;
+}
+
+.events__item--free {
+	background-image: url("./images/events/3.png");
+	grid-area: free;
+}
+
+.events__item--socials {
+	background-image: url("./images/events/4.png");
+	grid-area: socials;
+}
+
+.events__item--choose {
+	background-image: url("./images/events/5.png");
+	grid-area: choose;
+}
+
+.events__item-title {
+	max-width: 294px;
+	font-size: 32px;
+	font-weight: 500;
+	line-height: var(--header-line-height);
+	text-transform: uppercase;
+	margin-bottom: 45px;
 }
 
 @media (max-width: 1024px) {
