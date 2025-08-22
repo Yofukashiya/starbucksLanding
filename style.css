@@ -872,6 +872,11 @@ h2 {
 	padding-top: 45px;
 	padding-bottom: 25px;
 	padding-left: 25px;
+	transition: all 0.5s ease;
+}
+
+.events__item:hover {
+	transform: scale(1.05);
 }
 
 .events__item--price {
@@ -906,6 +911,140 @@ h2 {
 	line-height: var(--header-line-height);
 	text-transform: uppercase;
 	margin-bottom: 45px;
+}
+
+/* CONTACTS SECTION */
+.contacts {
+	margin-bottom: 135px;
+}
+
+.contacts__wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+.contacts__content {
+	display: flex;
+	flex-direction: column;
+	max-width: 390px;
+}
+
+.contacts__title {
+	margin-bottom: 50px;
+}
+
+.contacts__description {
+	margin-bottom: 50px;
+	position: relative;
+}
+
+.contacts__description::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 328px;
+	height: 262px;
+	border-radius: 328px;
+	background: linear-gradient(
+		267deg,
+		rgba(35, 114, 73, 0.11) 3.05%,
+		rgba(53, 198, 107, 0.15) 40.73%
+	);
+	filter: blur(88px);
+	z-index: -1;
+}
+
+.contacts__phone {
+	position: relative;
+	margin-left: 75px;
+}
+
+.contacts__phone::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: -18%;
+	transform: translate(-50%, -50%);
+	width: 44px;
+	height: 44px;
+	aspect-ratio: 1;
+	background: url("./icons/phone.png") center/contain no-repeat;
+}
+
+.contacts__content-image {
+	position: relative;
+	max-width: 360px;
+	margin-right: 50px;
+}
+
+.contacts__content-image::before {
+	content: "";
+	position: absolute;
+	top: 10%;
+	left: 20%;
+	transform: translate(-50%, -50%);
+	width: 324px;
+	height: 262px;
+	border-radius: 324px;
+	background: linear-gradient(
+		267deg,
+		rgba(35, 114, 73, 0.11) 3.05%,
+		rgba(53, 198, 107, 0.15) 40.73%
+	);
+	filter: blur(88px);
+}
+
+.contacts__content-image::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 0%;
+	transform: translate(-50%, -50%);
+	width: 1058px;
+	height: 500px;
+	background: url("./icons/lines-contacts.svg") center/cover no-repeat;
+	z-index: -10;
+}
+
+.contacts__content-image-wrapper {
+	position: relative;
+}
+
+.contacts__content-image-wrapper::before {
+	content: "";
+	position: absolute;
+	top: 30px;
+	right: -30px;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(
+		267deg,
+		rgba(35, 114, 73, 0.17) 3.05%,
+		rgba(53, 198, 107, 0.22) 40.73%
+	);
+	clip-path: polygon(114px 0px, 100% 0px, 100% 100%, 0px 100%, 0px 122px);
+	z-index: -5;
+}
+
+.contacts__content-image-wrapper::after {
+	content: "";
+	position: absolute;
+	top: 13%;
+	left: 10%;
+	transform: translate(-50%, -50%);
+	width: 190px;
+	height: 190px;
+	background: url("./icons/star-text.svg") center/contain no-repeat;
+	z-index: 5;
+}
+
+.contacts__content-image-wrapper img {
+	display: block;
+	width: 100%;
+	height: auto;
+	clip-path: polygon(114px 0px, 100% 0px, 100% 100%, 0px 100%, 0px 122px);
 }
 
 @media (max-width: 1024px) {
