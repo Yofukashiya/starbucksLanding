@@ -31,6 +31,15 @@
 							</li>
 						</ul>
 					</nav>
+
+					<button
+						class="hamburger-menu"
+						aria-label="Toggle navigation menu"
+					>
+						<span class="hamburger-line"></span>
+						<span class="hamburger-line"></span>
+						<span class="hamburger-line"></span>
+					</button>
 				</div>
 			</div>
 		</header>
@@ -227,8 +236,7 @@
 							<p class="products__description description">
 								Have time to buy the most harmonious drinks in
 								the new Starbucks coffee and don't forget about
-								the discount! Starbucks coffee and&nbsp; don't
-								forget about the discount!
+								the discount!
 							</p>
 						</div>
 						<div class="products__items">
@@ -554,5 +562,49 @@
 				</div>
 			</div>
 		</footer>
+
+		<script>
+			const hamburgerMenu = document.querySelector(".hamburger-menu");
+			const headerNav = document.querySelector(".header__nav");
+			const body = document.body;
+			let scrollPosition = 0;
+
+			hamburgerMenu.addEventListener("click", function () {
+				hamburgerMenu.classList.toggle("active");
+				headerNav.classList.toggle("active");
+
+				if (body.classList.contains("menu-open")) {
+					body.classList.remove("menu-open");
+					window.scrollTo(0, scrollPosition);
+				} else {
+					scrollPosition = window.pageYOffset;
+					body.classList.add("menu-open");
+				}
+			});
+
+			const menuLinks = document.querySelectorAll(".header__menu-link");
+			menuLinks.forEach((link) => {
+				link.addEventListener("click", function () {
+					hamburgerMenu.classList.remove("active");
+					headerNav.classList.remove("active");
+					body.classList.remove("menu-open");
+					// Restore scroll position
+					window.scrollTo(0, scrollPosition);
+				});
+			});
+
+			document.addEventListener("click", function (event) {
+				if (
+					!hamburgerMenu.contains(event.target) &&
+					!headerNav.contains(event.target)
+				) {
+					hamburgerMenu.classList.remove("active");
+					headerNav.classList.remove("active");
+					body.classList.remove("menu-open");
+					// Restore scroll position
+					window.scrollTo(0, scrollPosition);
+				}
+			});
+		</script>
 	</body>
 </html>
